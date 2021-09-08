@@ -19,6 +19,13 @@ if (dark === true) {
   store.commit('setTheme', false);
 }
 
+if (localStorage.accessToken && localStorage.refreshToken) {
+  store.commit('refresh', {
+    accessToken: localStorage.accessToken,
+    refreshToken: localStorage.refreshToken,
+  });
+}
+
 new Vue({
   vuetify,
   router,

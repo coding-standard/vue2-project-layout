@@ -3,6 +3,9 @@
     <core-appbar
       :menus="menus"
       :logoUrl="logoUrl"
+      :accounts="accounts"
+      :userMenus="userMenus"
+      :user="user"
     />
     <core-drawer :menus="menus" />
     <v-main class="content">
@@ -35,6 +38,9 @@ export default {
       'links',
       'dark',
       'language',
+      'accounts',
+      'userMenus',
+      'user',
     ]),
   },
 };

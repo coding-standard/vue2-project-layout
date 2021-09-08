@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import Menu from '@/assets/core/menu.json';
 import Link from '@/assets/core/link.json';
+import Account from '@/assets/core/account.json';
+import UserMenu from '@/assets/user/menu.json';
 
 Vue.use(Vuex);
 
@@ -13,6 +15,8 @@ export default new Vuex.Store({
     logoUrl: '/assets/images/logo.png',
     menus: Menu,
     links: Link,
+    accounts: Account,
+    userMenus: UserMenu,
     user: {
       id: 0,
       clientId: null,
@@ -122,6 +126,8 @@ export default new Vuex.Store({
   getters: {
     isSignedIn: (state) => (!((state.user.accessToken === undefined || state.user.accessToken === null || state.user.accessToken === ''))),
     accessToken: (state) => (state.user.accessToken ? state.user.accessToken : ''),
+    accounts: (state) => state.accounts,
+    userMenus: (state) => state.userMenus,
     user: (state) => state.user,
     profile: (state) => state.profile,
     links: (state) => state.links,
