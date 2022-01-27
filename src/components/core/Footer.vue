@@ -39,12 +39,13 @@ export default {
     changeLanguage() {
       if (this.language === 'cn') {
         this.setLanguage('en');
-      } else {
+      }
+      else {
         this.setLanguage('cn');
       }
       // eslint-disable-next-line no-restricted-globals
       location.reload();
-    },
-  },
+    }
+  }
 };
 </script>

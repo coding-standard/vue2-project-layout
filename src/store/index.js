@@ -24,12 +24,12 @@ export default new Vuex.Store({
       email: null,
       phone: null,
       accessToken: null,
-      refreshToken: null,
+      refreshToken: null
     },
     profile: {
       nickname: null,
-      avatarUrl: null,
-    },
+      avatarUrl: null
+    }
   },
   mutations: {
     signIn(state, data) {
@@ -40,7 +40,7 @@ export default new Vuex.Store({
         email,
         phone,
         accessToken,
-        refreshToken,
+        refreshToken
       } = data;
       localStorage.id = id;
       localStorage.clientId = clientId;
@@ -56,7 +56,7 @@ export default new Vuex.Store({
         email,
         phone,
         accessToken,
-        refreshToken,
+        refreshToken
       };
     },
     setNickname(state, payload) {
@@ -117,7 +117,7 @@ export default new Vuex.Store({
     setLanguage(state, payload) {
       state.language = payload;
       localStorage.language = payload;
-    },
+    }
   },
   actions: {
   },
@@ -134,6 +134,6 @@ export default new Vuex.Store({
     menus: (state) => state.menus,
     logoUrl: (state) => state.logoUrl,
     dark: (state) => state.dark,
-    language: (state) => state.language,
-  },
+    language: (state) => state.language
+  }
 });

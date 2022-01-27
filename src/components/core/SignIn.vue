@@ -50,19 +50,19 @@ export default {
     loading: false,
     form: {
       email: '',
-      password: '',
+      password: ''
     },
     emailRules: [],
-    passwordRules: [],
+    passwordRules: []
   }),
   created() {
     this.emailRules = [
       (v) => !!v || this.$i18n.t('signIn.emailRuleRequired'),
-      (v) => /.+@.+/.test(v) || this.$i18n.t('signIn.emailRuleFormat'),
+      (v) => /.+@.+/.test(v) || this.$i18n.t('signIn.emailRuleFormat')
     ];
     this.passwordRules = [
       (v) => !!v || this.$i18n.t('signIn.passwordRuleRequired'),
-      (v) => v.length >= 6 || 'more then 6',
+      (v) => v.length >= 6 || 'more then 6'
     ];
   },
   computed: {
@@ -70,7 +70,7 @@ export default {
     username() {
       // 我们很快就会看到 `params` 是什么
       return this.$route.params.username;
-    },
+    }
   },
   methods: {
     signIn() {
@@ -83,16 +83,17 @@ export default {
           email: 'vuefirst@vuefirst.com',
           phone: '123',
           accessToken: 'token',
-          refreshToken: 'token',
+          refreshToken: 'token'
         });
         this.$store.commit('setNickname', 'Vue First');
         this.$store.commit('setAvatarUrl', '');
         this.loading = false;
         this.$router.push('/');
-      } else {
+      }
+      else {
         console.log('error');
       }
-    },
-  },
+    }
+  }
 };
 </script>

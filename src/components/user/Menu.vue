@@ -33,7 +33,9 @@
               <v-icon v-text="userMenu.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title>{{ $t('user.userMenus.' + userMenu.name + '.text') }}</v-list-item-title>
+              <v-list-item-title>
+                {{ $t('user.userMenus.' + userMenu.name + '.text') }}
+              </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -56,10 +58,10 @@ export default {
   props: ['userMenus', 'user'],
   components: {},
   computed: {
-    ...mapGetters(['profile']),
+    ...mapGetters(['profile'])
   },
   methods: {
-    ...mapMutations(['signOut']),
-  },
+    ...mapMutations(['signOut'])
+  }
 };
 </script>

@@ -72,25 +72,25 @@ export default {
     form: {
       email: '',
       password: '',
-      rePassword: '',
+      rePassword: ''
     },
     emailRules: [],
     passwordRules: [],
-    rePasswordRules: [],
+    rePasswordRules: []
   }),
   created() {
     this.emailRules = [
       (v) => !!v || 'no email',
-      (v) => /.+@.+/.test(v) || 'bad email',
+      (v) => /.+@.+/.test(v) || 'bad email'
     ];
     this.passwordRules = [
       (v) => !!v || 'no pwd',
-      (v) => v.length >= 6 || 'more then 6',
+      (v) => v.length >= 6 || 'more then 6'
     ];
     this.rePasswordRules = [
       (v) => !!v || 'no repwd',
       (v) => v.length >= 6 || 'more then 6',
-      (v) => v === this.form.password || 'same as pwd',
+      (v) => v === this.form.password || 'same as pwd'
     ];
   },
   computed: {
@@ -98,7 +98,7 @@ export default {
     username() {
       // 我们很快就会看到 `params` 是什么
       return this.$route.params.username;
-    },
+    }
   },
   methods: {
     goBack() {
@@ -115,16 +115,17 @@ export default {
           email: 'vuefirst@vuefirst.com',
           phone: '123',
           accessToken: 'token',
-          refreshToken: 'token',
+          refreshToken: 'token'
         });
         this.$store.commit('setNickname', 'Vue First');
         this.$store.commit('setAvatarUrl', '');
         this.loading = false;
         this.$router.push('/');
-      } else {
+      }
+      else {
         console.log('error');
       }
-    },
-  },
+    }
+  }
 };
 </script>

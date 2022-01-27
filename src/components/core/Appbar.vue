@@ -38,8 +38,8 @@ import { mapMutations } from 'vuex';
 export default {
   props: ['menus', 'logoUrl', 'accounts', 'userMenus', 'user'],
   components: {
-    UserMenu: () => import('@/components/user/Menu'),
-    CoreAccount: () => import('@/components/core/Account'),
+    UserMenu: () => import('@/components/user/Menu.vue'),
+    CoreAccount: () => import('@/components/core/Account.vue')
   },
   methods: {
     ...mapMutations(['toggleDrawer']),
@@ -47,7 +47,7 @@ export default {
       e.stopPropagation();
       if (item.to || !item.href) return;
       this.$vuetify.goTo(item.href);
-    },
-  },
+    }
+  }
 };
 </script>

@@ -13,7 +13,7 @@
 export default {
   name: 'SignInPage',
   components: {
-    CoreSignIn: () => import('@/components/core/SignIn'),
-  },
+    CoreSignIn: () => import('@/components/core/SignIn.vue')
+  }
 };
 </script>

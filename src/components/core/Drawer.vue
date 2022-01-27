@@ -26,8 +26,8 @@ export default {
       },
       set(val) {
         this.setDrawer(val);
-      },
-    },
+      }
+    }
   },
   methods: {
     ...mapMutations(['setDrawer']),
@@ -41,7 +41,7 @@ export default {
       if (item.to || !item.href) return;
       this.$vuetify.goTo(item.href);
       this.setDrawer(false);
-    },
-  },
+    }
+  }
 };
 </script>

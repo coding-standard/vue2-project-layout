@@ -19,5 +19,5 @@ function loadLocaleMessages() {
 export default new VueI18n({
   locale: localStorage.language || window.navigator.language.toLowerCase() || 'cn',
   fallbackLocale: 'cn',
-  messages: loadLocaleMessages(),
+  messages: loadLocaleMessages()
 });

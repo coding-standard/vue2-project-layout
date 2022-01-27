@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 import store from '@/store';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -43,28 +43,29 @@ const routes = [
     children: [
       {
         path: 'profile',
-        component: () => import('@/views/Empty.vue'),
+        component: () => import('@/views/Empty.vue')
       },
       {
         path: 'orgs',
-        component: () => import('@/views/Empty.vue'),
+        component: () => import('@/views/Empty.vue')
       },
       {
         path: 'changepassword',
-        component: () => import('@/views/Empty.vue'),
+        component: () => import('@/views/Empty.vue')
       },
       {
         path: 'setting',
-        component: () => import('@/views/Empty.vue'),
-      },
+        component: () => import('@/views/Empty.vue')
+      }
     ],
     beforeEnter: (to, from, next) => {
       if (store.getters.accessToken) {
         next();
-      } else {
+      }
+      else {
         next({ path: '/signin' });
       }
-    },
+    }
   },
   {
     path: '/signin',
@@ -73,10 +74,11 @@ const routes = [
     beforeEnter: (to, from, next) => {
       if (!store.getters.accessToken) {
         next();
-      } else {
+      }
+      else {
         next({ path: '/user' });
       }
-    },
+    }
   },
   {
     path: '/signup',
@@ -85,17 +87,18 @@ const routes = [
     beforeEnter: (to, from, next) => {
       if (!store.getters.accessToken) {
         next();
-      } else {
+      }
+      else {
         next({ path: '/user' });
       }
-    },
+    }
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;

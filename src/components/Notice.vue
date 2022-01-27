@@ -17,6 +17,6 @@ export default {
   props: ['message', 'icon'],
 
   methods: {
-  },
+  }
 };
 </script>

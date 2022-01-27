@@ -23,13 +23,13 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'App',
   components: {
-    CoreDrawer: () => import('@/components/core/Drawer'),
-    CoreAppbar: () => import('@/components/core/Appbar'),
-    CoreFooter: () => import('@/components/core/Footer'),
-    Help: () => import('@/components/Help'),
+    CoreDrawer: () => import('@/components/core/Drawer.vue'),
+    CoreAppbar: () => import('@/components/core/Appbar.vue'),
+    CoreFooter: () => import('@/components/core/Footer.vue'),
+    Help: () => import('@/components/Help.vue')
   },
   data: () => ({
-    showHelp: false,
+    showHelp: false
   }),
   computed: {
     ...mapGetters([
@@ -40,9 +40,9 @@ export default {
       'language',
       'accounts',
       'userMenus',
-      'user',
-    ]),
-  },
+      'user'
+    ])
+  }
 };
 </script>
 <style>

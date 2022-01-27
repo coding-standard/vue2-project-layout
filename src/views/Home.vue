@@ -16,20 +16,20 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "Home",
+  name: 'Home',
   metaInfo() {
     return {
-      title: this.$t("home.metaTitle"),
+      title: this.$t('home.metaTitle'),
       meta: [
-        { name: "description", content: this.$t("meta.description") },
-        { name: "keywords", content: this.$t("meta.keywords") },
-        { property: "og:url", content: "https://vuefirst/" },
-        { property: "og:description", content: this.$t("meta.description") },
-        { property: "og:type", content: "website" },
-      ],
+        { name: 'description', content: this.$t('meta.description') },
+        { name: 'keywords', content: this.$t('meta.keywords') },
+        { property: 'og:url', content: 'https://vuefirst/' },
+        { property: 'og:description', content: this.$t('meta.description') },
+        { property: 'og:type', content: 'website' }
+      ]
     };
   },
   components: {
@@ -37,11 +37,11 @@ export default {
   data: () => ({
   }),
   computed: {
-    ...mapGetters(["dark"]),
+    ...mapGetters(['dark'])
   },
   created() {
   },
-  methods: {},
+  methods: {}
 };
 </script>
 <style scoped>

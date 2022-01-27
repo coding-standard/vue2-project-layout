@@ -7,7 +7,9 @@
     </template>
     <v-list>
       <v-list-item v-for="(account, i) in accounts" :key="i" :to="account.path">
-        <v-list-item-title align="right">{{ $t('core.accounts.' + account.name + '.text') }}</v-list-item-title>
+        <v-list-item-title align="right">
+          {{ $t('core.accounts.' + account.name + '.text') }}
+        </v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>
@@ -20,6 +22,6 @@ export default {
   props: ['accounts'],
   components: {},
   computed: {},
-  methods: {},
+  methods: {}
 };
 </script>

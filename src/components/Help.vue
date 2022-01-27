@@ -66,9 +66,9 @@ export default {
     this.isHelpShow = this.show;
   },
   data: () => ({
-    isHelpShow: false,
+    isHelpShow: false
   }),
   methods: {
-  },
+  }
 };
 </script>

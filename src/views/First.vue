@@ -5,21 +5,21 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "First",
+  name: 'First',
   data: () => ({
   }),
   created() {
   },
   methods: {},
   components: {
-    Notice: () => import('@/components/Notice'),
+    Notice: () => import('@/components/Notice.vue')
   },
   computed: {
-    ...mapGetters(["dark"]),
-  },
+    ...mapGetters(['dark'])
+  }
 };
 
 </script>
